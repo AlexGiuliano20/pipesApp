@@ -16,7 +16,14 @@ export class NoComunesComponent {
   };
 
   //i18nPlural
-  clientes: string[] = ['Maria', 'Pedro', 'Juan', 'Ramón', 'Ricardo', 'San Martin'];
+  clientes: string[] = [
+    'Maria',
+    'Pedro',
+    'Juan',
+    'Ramón',
+    'Ricardo',
+    'San Martin',
+  ];
   clientesMap = {
     '=0': 'no tenemos ningún cliente esperando.',
     '=1': 'tenemos un cliente esperando.',
@@ -32,4 +39,11 @@ export class NoComunesComponent {
   borrarCliente(): void {
     this.clientes.pop();
   }
+
+  // KeyValue Pipe
+  persona = {
+    nombre: 'Alex',
+    edad: 21,
+    direccion: 'Bs As, Argentina',
+  };
 }
