@@ -4,37 +4,53 @@
 </div>
 
 <p-toolbar>
-    <div class="p-toolbar-group-left">
-       
-    </div>
-    
-    <div class="p-toolbar-group-right">
-        <button pButton class="mr-1 p-button-warning" label="Toggle Mayúsculas" (click)="cambiar()"></button>
-        <button pButton icon="pi pi-sort" label="Por nombre" class="mr-1 p-button-info"></button>
-        <button pButton icon="pi pi-sort" label="Valores" class="mr-1 p-button-success"></button>
-        <button pButton icon="pi pi-sort" label="Por color" class="mr-1 p-button-help"></button>
-    </div>
+  <div class="p-toolbar-group-left"></div>
+
+  <div class="p-toolbar-group-right">
+    <button
+      pButton
+      class="mr-1 p-button-warning"
+      label="Toggle Mayúsculas"
+      (click)="cambiar()"
+    ></button>
+    <button
+      pButton
+      icon="pi pi-sort"
+      label="Por nombre"
+      class="mr-1 p-button-info"
+    ></button>
+    <button
+      pButton
+      icon="pi pi-sort"
+      label="Valores"
+      class="mr-1 p-button-success"
+    ></button>
+    <button
+      pButton
+      icon="pi pi-sort"
+      label="Por color"
+      class="mr-1 p-button-help"
+    ></button>
+  </div>
 </p-toolbar>
 
 <div class="grid">
-    <div class="col mt-2">
-        <p-table [value]="[]" responsiveLayout="scroll">
-            <ng-template pTemplate="header">
-                <tr>
-                    <th>Code</th>
-                    <th>Name</th>
-                    <th>Category</th>
-                    <th>Quantity</th>
-                </tr>
-            </ng-template>
-            <ng-template pTemplate="body" let-product>
-                <tr>
-                    <td>{{product.code}}</td>
-                    <td>{{product.name}}</td>
-                    <td>{{product.category}}</td>
-                    <td>{{product.quantity}}</td>
-                </tr>
-            </ng-template>
-        </p-table>
-    </div>
+  <div class="col mt-2">
+    <p-table [value]="heroes" responsiveLayout="scroll">
+      <ng-template pTemplate="header">
+        <tr>
+          <th>Nombre</th>
+          <th>Vuela</th>
+          <th>Color</th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-heroe>
+        <tr>
+          <td>{{ heroe.nombre }}</td>
+          <td>{{ heroe.vuela }}</td>
+          <td>{{ heroe.color }}</td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </div>
 </div>
